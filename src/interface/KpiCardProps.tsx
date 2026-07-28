@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export default interface KPICardProps {
+export interface KPICardProps {
   title: string;
   value: string;
   change: string;

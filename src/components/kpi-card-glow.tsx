@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TrendingUp, TrendingDown } from "lucide-react";
-import KPICardProps from "@/interface/KpiCardProps";
+import {KPICardProps} from "@/interface/KpiCardProps";
 
 export function KPICardGlow({ title, value, change, isPositive, icon, delay = 0 }: KPICardProps) {
   return (
