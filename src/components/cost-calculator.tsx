@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Server, Cpu, Database, Zap, Sparkles } from "lucide-react";
 
-export function CostCalculator() {
+export default function CostCalculator() {
   const [users, setUsers] = useState(5000);
 
   // Lógica de estimación de costes de infraestructura según volumen de usuarios

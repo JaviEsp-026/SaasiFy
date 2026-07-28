@@ -1,7 +1,7 @@
 import { DollarSign, Users, ShoppingCart, Activity } from "lucide-react";
 import { KPICard } from "@/components/kpi-card";
 import { RevenueChart } from "@/components/revenue-chart";
-import { CostCalculator } from "./cost-calculator/page";
+import CostCalculator from "@/components/cost-calculator";
 
 export default function Home() {
   return (
