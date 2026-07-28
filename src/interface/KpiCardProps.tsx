@@ -1,9 +1,12 @@
 import { ReactNode } from "react";
 
-export interface KPICardProps {
+export default interface KPICardProps {
   title: string;
   value: string;
   change: string;
   isPositive: boolean;
   icon: ReactNode;
+  delay?: number;
 }
+
+
