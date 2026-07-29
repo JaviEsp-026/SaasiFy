@@ -20,7 +20,7 @@ export default function RootLayout({
     
       <html lang="es" suppressHydrationWarning>
         <body className={`${inter.className} bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased`}>
-          <ThemeProvider defaultTheme="dark" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex min-h-screen">
             <Sidebar />
             {/* El contenido principal se desplaza a la derecha en escritorio */}

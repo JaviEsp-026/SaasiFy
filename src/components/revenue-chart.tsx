@@ -14,13 +14,13 @@ const data = [
 
 export function RevenueChart() {
   return (
-    <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+    <div className="p-6 rounded-2xl bg-white dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-4">
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-lg font-bold text-slate-900 dark:text-white">Crecimiento de Ingresos (MRR)</h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">Evolución en los últimos 7 meses</p>
         </div>
-        <span className="text-xs font-medium px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
+        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50">
           +239% este año
         </span>
       </div>
@@ -34,15 +34,15 @@ export function RevenueChart() {
                 <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <XAxis dataKey="month" stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
-            <YAxis stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(val) => `${val / 1000}k €`} />
+            <XAxis dataKey="month" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} />
+            <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(val) => `${val / 1000}k €`} />
             <Tooltip
               content={({ active, payload }) => {
                 if (active && payload && payload.length) {
                   return (
-                    <div className="bg-slate-900 text-white p-3 rounded-xl shadow-xl text-xs space-y-1">
-                      <p className="font-semibold text-slate-300">{payload[0].payload.month}</p>
-                      <p className="text-indigo-400 font-bold text-sm">{payload[0].value?.toLocaleString()} €</p>
+                    <div className="bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 p-3 rounded-xl shadow-xl text-xs space-y-0.5 border border-slate-700 dark:border-slate-200">
+                      <p className="font-semibold opacity-80">{payload[0].payload.month}</p>
+                      <p className="text-indigo-400 dark:text-indigo-600 font-bold text-sm">{payload[0].value?.toLocaleString()} €</p>
                     </div>
                   );
                 }
